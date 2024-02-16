@@ -38,6 +38,7 @@ enum class Message : uint8_t {
     SleepMode       = 11,
     ConfigAlarmLock = 12,
     HardStop        = 13,
+    GcodeInvalidTarget = 20,
     FileQuit        = 60,  // mc_critical was called during a file job
 };
 
@@ -49,6 +50,7 @@ extern Counter report_wco_counter;
 //function to notify
 void _notify(const char* title, const char* msg);
 void _notifyf(const char* title, const char* format, ...);
+
 
 // Prints miscellaneous feedback messages.
 void report_feedback_message(Message message);

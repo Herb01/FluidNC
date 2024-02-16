@@ -28,6 +28,9 @@
 #include "UserOutputs.h"
 #include "Macros.h"
 
+// Rapid Change
+#include "../Custom/RapidChange.h"
+
 #include <string_view>
 
 namespace Machine {
@@ -76,6 +79,10 @@ namespace Machine {
         Parking*              _parking        = nullptr;
         OLED*                 _oled           = nullptr;
         Status_Outputs*       _stat_out       = nullptr;
+
+        // Rapid Change
+        RapidChange::RapidChange*    _rapidChange = nullptr;
+
         Spindles::SpindleList _spindles;
 
         UartChannel* _uart_channels[MAX_N_UARTS] = { nullptr };
